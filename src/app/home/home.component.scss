@@ -1,0 +1,92 @@
+h1 {
+    font-weight: 50;
+}
+p {
+    width: 60vw;
+    max-width:360px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+}
+.bold {
+    font-weight:900;
+}
+.home {
+    margin: 2rem;
+    text-align: center;
+} 
+.logo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#background{
+    position:relative;
+    margin-top: 10rem;
+}
+.pendulum{
+    position:absolute; 
+    width: 220px;
+    height: 180px;
+    background-color: lightblue;
+    top:50%;
+    left:  50%;
+    border-radius: 5%;
+    align-items: center;
+    border-top: 15px solid #eee7d5;
+    transform: translate(-50%, -50%);
+    }
+  .pendulum_box{
+    display: flex;
+    padding: 120px 0 0 10px;
+    position: absolute;
+    flex: 1;
+  }
+  .ball{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #455681;
+    position: relative;
+    transform-origin: 50% -300%;
+    
+  }
+    .ball::before{
+      content: '';
+      width: 2px;
+      height: 120px;
+      background-color: #fffeff;
+      left: 18px;
+      top: -120px;
+      position: absolute;
+    }
+  
+  .ball.first{
+    animation: firstball .9s alternate ease-in infinite;
+  }
+  
+  @keyframes firstball{
+    0%{
+      transform: rotate(35deg);
+    }
+    50%{
+      transform: rotate(0deg);
+    }
+  }
+  
+  .ball.last{
+    animation: lastball .9s alternate ease-out infinite;
+  }
+  
+  @keyframes lastball{
+    50%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(-35deg);
+    }
+  }
