@@ -20,12 +20,13 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Build Angular project
-        run: npm run build -- --configuration production
+      - name: Set Git identity
+        run: |
+          git config --global user.email "ci-bot@example.com"
+          git config --global user.name "CI Bot"
 
       - name: Deploy to GitHub Pages
         env:
           NG_CLI_ANALYTICS: "false"
           GH_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
-        run: npx angular-cli-ghpages --dir=dist/portfolio-angular
+        run: npx ng deploy --base-href=/portfolio-angular/ --no-silent
