@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faGithubSquare,faKaggle,faLinkedin, IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare,faKaggle,faLinkedin, IconDefinition, faDev } from '@fortawesome/free-brands-svg-icons';
 
 interface Item {
   "icon": IconDefinition,
@@ -21,5 +21,6 @@ export class ContactComponent {
     {"icon":faGithubSquare,"alt": "GitHub icon", "url":"https://github.com/Satoshi-Sh/"},
     {"icon":faKaggle,"alt": "Kaggle icon", "url":"https://www.kaggle.com/satoshiss"},
     {"icon":faLinkedin,"alt": "LinkedIn icon", "url":"https://www.linkedin.com/in/satoshi-89bb58a8/"},
+    {"icon":faDev,"alt": "DevTo icon", "url":"https://dev.to/satoshi-sh"},
   ]
 }
