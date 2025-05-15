@@ -1,0 +1,14 @@
+<div class="contact">
+  <h1>Contact</h1>
+  <div class="icons-div">
+    @for (contact of contacts; track contact.alt){
+    <a [href]="contact.url">
+      <fa-icon
+        [icon]="contact.icon"
+        [attr.alt]="contact.alt"
+        [size]="'3x'"
+      ></fa-icon>
+    </a>
+    }
+  </div>
+</div>

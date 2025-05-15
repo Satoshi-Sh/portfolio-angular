@@ -1,0 +1,20 @@
+.contact {
+  margin: 2rem;
+  text-align: center;
+}
+
+.icons-div {
+  margin-top: 5rem;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  a {
+    color: black;
+  }
+  a:hover {
+    color: grey;
+  }
+}

@@ -13,6 +13,12 @@ export const routes: Routes = [
         loadComponent: ()=>{
             return import('./about/about.component').then((m)=>m.AboutComponent);
         }
+    },
+    {
+        path:'contact',
+        loadComponent: ()=>{
+            return import('./contact/contact.component').then((m)=>m.ContactComponent);
+        }
     }
     
 ];
