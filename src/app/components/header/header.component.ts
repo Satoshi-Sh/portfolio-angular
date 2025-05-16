@@ -9,6 +9,7 @@ import { RouterLink } from '@angular/router';
     <nav>
         <span routerLink="/">{{ title() }}</span>
         <ul>
+            <li routerLink="/blog">Blog</li>
             <li routerLink="/contact">Contact</li>
         </ul>
     </nav>

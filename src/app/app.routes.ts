@@ -19,6 +19,12 @@ export const routes: Routes = [
         loadComponent: ()=>{
             return import('./contact/contact.component').then((m)=>m.ContactComponent);
         }
-    }
+    },
+    {
+        path:'blog',
+        loadComponent: ()=>{
+            return import('./blog/blog.component').then((m)=>m.BlogComponent);
+        }
+    },
     
 ];
