@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { DevtoApiService } from '../devto-api.service';
 
 @Component({
   selector: 'app-blog',
@@ -6,6 +7,15 @@ import { Component } from '@angular/core';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss'
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
+  blogs: any[] = [];
+  constructor(private devtoApi: DevtoApiService){}
+
+  ngOnInit(): void {
+    this.devtoApi.getBlog().subscribe({
+      next: data => this.blogs = data,
+      error: err => console.error('Error fetching post:', err),
+    })
+  }
 
 }

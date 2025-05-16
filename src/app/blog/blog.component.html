@@ -1,1 +1,7 @@
-<p>blog works!</p>
+<div class="blogs-div">
+  @for (blog of blogs; track blog.id){
+  <div class="blog-div">
+    <a [href]="blog.url" target="_blank"> {{ blog.title }} </a>
+  </div>
+  }
+</div>
